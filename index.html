@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide&effect=neon|fire">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Search with Image Highlight</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 30px;
+            background-color: black;
+            color: white;
+           /* background-image: url(https://wallpapers.com/images/hd/netflix-background-gs7hjuwvv2g0e9fj.jpg);*/
+        }
+        .search-box {
+            width: 300px;
+            padding: 10px;
+            border: 2px solid #333;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+       .movie-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+       }
+        .movie {
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .movie img {
+            width: 200px;
+            height: 300px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        .highlight {
+            box-shadow: 0 0 15px black, 0 0 30px white, 0 0 50px black, 0 0 80px white, 0 0 100px black;
+          /*  border: 3px solid rgb(243, 68, 255);*/
+            transform: scale(1.1);
+        }
+        .copyright{
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+        .movie:hover{
+            box-shadow: 0 0 15px rgb(255, 255, 255), 0 0 25px rgb(255, 255, 255), 0 0 50px rgb(255, 255, 255), 0 0 75px rgb(0, 0, 0), 0 0 100px rgb(255, 255, 255);
+            transform: scale(1.02);
+    
+        }
+        a{
+            color: white;
+            text-decoration: none;
+        }
+        ul{
+            list-style-type: none;
+            background-color: black;
+            color: white;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-radius: 15px;
+            
+            
+        }
+        ul li {
+            display: inline-block;
+            padding: 10px;
+            transition: 0.8s;
+            
+        
+            
+        }
+        ul li:hover{
+            background-color: rgb(239, 23, 243);
+            box-shadow: 0 0 15px rgb(215, 36, 255), 0 0 35px rgb(219, 18, 255), 0 0 75px rgb(0, 49, 128), 0 0 100px rgb(57, 11, 239);
+            color: white;
+            border-radius: 7px;
+        }
+        .flexx{
+            font-family: "Audiowide",sans-serif;
+            text-shadow: 5px 10px 10px green;
+        }
+        .movi1{
+            background-image: url(inception.jpg);
+        }
+    </style>
+</head>
+<body>
+
+    <h2 class="flexx font-effect-neon">Flexx Movies</h2>
+    <div class="main">
+        <ul>
+            <li><a href="index.html">HOLLYWOOD</a></li>
+            <li><a href="bollywood.html">BOLLYWOOD</a></li>
+            <li><a href="anime.html">ANIME</a></li>
+            <li><a href="historical.html">HISTORICAL</a></li>
+            <li><a href="kdrama.html">K DRAMA</a></li>
+            <input type="text" class="search-box" id="searchInput" placeholder="Search movie...">
+        </ul>
+    </div>
+
+    
+    <div class="movie-container" id="movieContainer">
+
+
+        <div class="movie" id="movie1">
+            <img onclick="alert('Movie not avalebal')" src="batman-by-dan-mora-v0-jm35wvihr52d1.webp" alt="The Dark Knight">
+            <p>The Dark Knight</p> 
+        </div>
+
+
+        <div class="movie" id="movie2">
+            <img onclick="alert('Movie not avalebal')" src="inception.jpg" alt="Inception">
+            <p>Inception</p>
+        </div>
+
+
+        <div class="movie" id="movie3">
+            <img onclick="alert('Movie not avalebal')" src="avenger.jpg" alt="Avengers: Endgame">
+            <p>Avengers: Endgame</p>
+        </div>
+
+
+        <div class="movie" id="movie4">
+            <a href="https://www.filmyzilla.coop.in/movie/2248/Joker-(2019)-hindi-dubbed.html" target="_blank">
+            <img src="jocker.jpg" alt="Joker"></a>
+            <p>Joker</p>
+        </div>
+
+         
+            <div onclick="alert('Movie not avalebal')" class="movie" id="movie5">
+                <img src="wensday.jpg" alt="Wensday">
+                <p>Wensday</p>
+            </div>
+
+
+            <div onclick="alert('Movie not avalebal')" class="movie" id="movie6">
+                <img src="stringer thing.jpg" alt="Stringer Things">
+                <p>Stringer Things</p>
+            </div>
+
+
+            <div onclick="alert('Movie not avalebal')" class="movie" id="movie7">
+                <img src="god of thrown.jpg" alt="God of Thrown">
+                <p>God of thrones</p>
+            </div>
+
+
+            <div onclick="alert('Movie not avalebal')" class="movie" id="movie8">
+                <img src="breaking bad" alt="Breaking Bad">
+                <p>Breaking Bad</p>
+            </div>
+
+
+            <div onclick="alert('Movie not avalebal')" class="movie" id="movie9">
+                <img src="bolldhunds.jpg" alt="Bloodhounds">
+                <p>Bloodhounds</p>
+            </div>
+
+
+            <div onclick="alert('Movie not avalebal')" class="movie" id="movie10">
+                <img src="hulk.jpg" alt="Hulk">
+                <p>Hulk</p>
+            </div>
+
+
+            <div onclick="alert('Movie not avalebal')" class="movie" id="movie11">
+                <img src="thor.jpg" alt="Thor">
+                <p>Thor</p>
+            </div>
+
+
+            <div class="movie" id="movie12">
+                <a href="https://moviesanywhere.com/movie/spider-man-no-way-home-2021" target="_blank">
+                <img  src="spiderman" alt="Spider-Man: No Way Home"></a>
+                <p>Spider-Man: No Way Home</p>
+            </div>
+      
+            <div onclick="alert('Movie not avalebal')" class="movie" id="movie12">
+                <img src="the electric state.jpg" alt="electric star">
+                <p>Electric star</p>
+            </div>
+
+            <div onclick="alert('Movie not avalebal')" class="movie" id="movie11">
+                <img src="blackpanther.jpg" alt="Black panther">
+                <p>Black panther</p>
+            </div>
+
+            <div onclick="alert('Movie not avalebal')" class="movie" id="movie11">
+                <img src="fast end furious.jpg" alt="fast and furious">
+                <p>fast and furious</p>
+            </div>
+
+            <div onclick="alert('Movie not avalebal')" class="movie" id="movie11">
+                <img src="maze runner.jpg" alt="maze runner">
+                <p>maze runner</p>
+            </div>
+
+            <div onclick="alert('Movie not avalebal')" class="movie" id="movie11">
+                <img src="mission impossible.jpg" alt="mission impossible">
+                <p>mission impossible</p>
+            </div>
+
+            <div onclick="alert('Movie not avalebal')" class="movie" id="movie11">
+                <img src="the meg.jpg" alt="the meg">
+                <p>The meg</p>
+            </div>
+
+            <div onclick="alert('Movie not avalebal')" class="movie" id="movie11">
+                <img src="conguring.jpg" alt="conjuring">
+                <p>Conjuring</p>
+            </div>
+
+            <div onclick="alert('Movie not avalebal')" class="movie" id="movie11">
+                <img src="knight and day.jpg" alt="knight and day">
+                <p>knight and day</p>
+            </div>
+
+            <div onclick="alert('Movie not avalebal')" class="movie" id="movie11">
+                <img src="real steel.webp" alt="REAL STEEL">
+                <p>Real steel</p>
+            </div>
+
+            <div onclick="alert('Movie not avalebal')" class="movie" id="movie11">
+                <img src="deadpool.jpg" alt="deadpool">
+                <p>Deadpool</p>
+            </div>
+
+            <div onclick="alert('Movie not avalebal')" class="movie" id="movie11">
+                <img src="interstellar.jpg" alt="interstellar">
+                <p>interstellar</p>
+            </div>
+
+            <div onclick="alert('Movie not avalebal')" class="movie" id="movie11">
+                <img src="passengers.jpg" alt="passengers">
+                <p>Passengers</p>
+            </div>
+
+
+
+    </div>
+<hr>
+<h4 class="copyright">Copyright Claim ©<img src="social media1 logos.webp" width="120px"></h4>
+    <script>
+        document.getElementById('searchInput').addEventListener('input', function() {
+            let filter = this.value.toLowerCase();
+            let movies = document.querySelectorAll('.movie');
+            let container = document.getElementById('movieContainer');
+
+            let matchedMovies = [];
+
+            movies.forEach(function(movie) {
+                let movieName = movie.textContent.toLowerCase();
+                if (movieName.includes(filter) && filter !== "") {
+                    movie.classList.add('highlight');
+                    matchedMovies.unshift(movie); // Top pe lane ke liye
+                } else {
+                    movie.classList.remove('highlight');
+                    matchedMovies.push(movie);
+                }
+            });
+
+            // Movies ko container ke andar dobara arrange karna
+            container.innerHTML = "";
+            matchedMovies.forEach(movie => container.appendChild(movie));
+        });
+    </script>
+
+</body>
+</html>

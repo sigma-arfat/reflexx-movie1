@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 30px;
+    background-color: black;
+    color: white;
+   /* background-image: url(https://wallpapers.com/images/hd/netflix-background-gs7hjuwvv2g0e9fj.jpg);*/
+}
+.search-box {
+    width: 300px;
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.movie-container {
+    display: fLex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+.movie {
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.movie img {
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+.highlight {
+    box-shadow: 0 0 15px black, 0 0 30px white, 0 0 50px black, 0 0 80px white, 0 0 100px black;
+  /*  border: 3px solid rgb(243, 68, 255);*/
+    transform: scale(1.1);
+}
+.copyright{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.movie:hover{
+    box-shadow: 0 0 15px rgb(255, 255, 255), 0 0 25px rgb(255, 255, 255), 0 0 50px rgb(255, 255, 255), 0 0 75px rgb(0, 0, 0), 0 0 100px rgb(255, 255, 255);
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+    background-color: black;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 15px;
+    
+    
+}
+ul li {
+    display: inline-block;
+    padding: 10px;
+    transition: 0.8s;
+    
+
+    
+}
+ul li:hover{
+    background-color: rgb(239, 23, 243);
+    box-shadow: 0 0 15px rgb(215, 36, 255), 0 0 35px rgb(219, 18, 255), 0 0 75px rgb(0, 49, 128), 0 0 100px rgb(57, 11, 239);
+    color: white;
+    border-radius: 7px;
+}
+.flexx{
+    font-family: "Audiowide",sans-serif;
+    text-shadow: 5px 10px 10px green;
+}
+
+</style>
+<body>
+    <h2 class="flexx font-effect-neon">Flexx Movies</h2>
+    <div class="main">
+        <ul>
+          <!-- <li><a href="http://127.0.0.1:5500/headline.html">HOLLYWOOD</a></li>--> 
+            <li><a href="index.html">HOLLYWOOD</a></li>
+            <li><a href="bollywood.html">BOLLYWOOD</a></li>
+            <li><a href="anime.html">ANIME</a></li>
+            <li><a href="historical.html">HISTORICAL</a></li>
+            <li><a href="kdrama.html">K DRAMA</a></li>
+            <input type="text" class="search-box" id="searchInput" placeholder="Search movie...">
+        </ul>
+    </div>
+    <div class="movie-container" id="movieContainer">
+
+
+        <div class="movie" id="movie1">
+            <img onclick="alert('Movie not avalebal')" src="https://image.tmdb.org/t/p/original/yA6TbjztJtop9sqNkZjhsUDq2Uy.jpg" alt="Spirited Away">
+            <p>Spirited Away</p>
+        </div>
+
+   
+        <div class="movie" id="movie1">
+            <img onclick="alert('Movie not avalebal')" src="https://picfiles.alphacoders.com/355/355178.jpg" alt="My Neighbor Totoro">
+            <p>My Neighbor Totoro</p>
+        </div>
+
+        <div class="movie" id="movie1">
+            <img onclick="alert('Movie not avalebal')" src="https://www.themoviedb.org/t/p/original/3uFBXYcUfvD7y0Cc2Pbv5NJXGPF.jpg" alt="Princess Mononoke">
+            <p>Princess Mononoke</p>
+        </div>
+
+        <div class="movie" id="movie1">
+            <img onclick="alert('Movie not avalebal')" src="https://wallpaperaccess.com/full/257079.jpg" alt="Akira">
+            <p>Akira</p>
+        </div>
+
+        <div class="movie" id="movie1">
+            <img onclick="alert('Movie not avalebal')" src="https://image.tmdb.org/t/p/original/qG3RYlIVpTYclR9TYIsy8p7m7AT.jpg" alt="Grave of the Fireflies">
+            <p>Grave of the Fireflies</p>
+        </div>
+
+        <div class="movie" id="movie1">
+            <img onclick="alert('Movie not avalebal')" src="https://image.tmdb.org/t/p/original/5iVUUnE2tgBPypACYNobCKHagfV.jpg" alt="Bleach">
+            <p>Bleach</p>
+        </div>
+
+        <div class="movie" id="movie1">
+            <img onclick="alert('Movie not avalebal')" src="https://th.bing.com/th/id/OIP.xo-v3HrwFR3qHW-BfM5iHgHaLH?rs=1&pid=ImgDetMain" alt="My Hero Academia">
+            <p>My Hero Academia</p>
+        </div>
+
+        <div class="movie" id="movie1">
+            <img onclick="alert('Movie not avalebal')" src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/09/jujutsu-kaisen.jpg" alt="Jujutsu Kaisen">
+            <p>Jujutsu Kaisen</p>
+        </div>
+
+        <div class="movie" id="movie1">
+            <img onclick="alert('Movie not avalebal')" src="https://demonslayer-anime.com/risshihen/assets/img/top/img_main_pc.jpg" alt="Demon Slayer">
+            <p>Demon Slayer</p>
+        </div>
+
+        <div class="movie" id="movie1">
+            <img onclick="alert('Movie not avalebal')" src="https://picfiles.alphacoders.com/379/thumb-1920-379367.jpg" alt="Hunter x Hunter">
+            <p>Hunter x Hunter</p>
+        </div>
+
+        <div class="movie" id="movie1">
+            <img onclick="alert('Movie not avalebal')" src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/09/one-piece-9.jpg" alt="One Piece">
+            <p>One Piece</p>
+        </div>
+
+        <div class="movie" id="movie1">
+            <img onclick="alert('Movie not avalebal')" src="https://m.media-amazon.com/images/M/MV5BZmEzN2YzOTItMDI5MS00MGU4LWI1NWQtOTg5ZThhNGQwYTEzXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_.jpg" alt="Fullmetal Alchemist: Brotherhood">
+            <p>Fullmetal Alchemist: Brotherhood</p>
+        </div>
+
+        <div class="movie" id="movie1">
+            <img onclick="alert('Movie not avalebal')" src="https://www.themoviedb.org/t/p/original/pkHRYnUx0M00uiIeGkJmUxizwLp.jpg" alt="Sword of the Stranger">
+            <p>Sword of the Stranger</p>
+        </div>
+
+        <div class="movie" id="movie1">
+            <img onclick="alert('Movie not avalebal')" src="https://th.bing.com/th/id/OIP.bVzAH42Kvfm5tW4hduqhLwHaLH?rs=1&pid=ImgDetMain" alt="Ninja Scroll">
+            <p>Ninja Scroll</p>
+        </div>
+
+    </div>
+    <script>
+        document.getElementById('searchInput').addEventListener('input', function() {
+            let filter = this.value.toLowerCase();
+            let movies = document.querySelectorAll('.movie');
+            let container = document.getElementById('movieContainer');
+
+            let matchedMovies = [];
+
+            movies.forEach(function(movie) {
+                let movieName = movie.textContent.toLowerCase();
+                if (movieName.includes(filter) && filter !== "") {
+                    movie.classList.add('highlight');
+                    matchedMovies.unshift(movie); // Top pe lane ke liye
+                } else {
+                    movie.classList.remove('highlight');
+                    matchedMovies.push(movie);
+                }
+            });
+
+            // Movies ko container ke andar dobara arrange karna
+            container.innerHTML = "";
+            matchedMovies.forEach(movie => container.appendChild(movie));
+        });
+    </script>
+</body>
+</html>
