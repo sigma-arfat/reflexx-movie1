@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AlokGPT - Movie Chatbot</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.chat-container {
+  max-width: 600px;
+  margin: 50px auto;
+  background: #222;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 15px #0f0;
+}
+
+.chat-box {
+  padding: 20px;
+  height: 400px;
+  overflow-y: auto;
+}
+
+.input-area {
+  display: flex;
+  border-top: 1px solid #444;
+}
+
+#userInput {
+  flex: 1;
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background: #333;
+  color: white;
+}
+
+button {
+  padding: 15px 25px;
+  background: #0f0;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+  </style>
+</head>
+<body>
+  <div class="chat-container">
+    <div class="chat-box" id="chatBox"></div>
+    <div class="input-area">
+      <input type="text" id="userInput" placeholder="Ask about any movie..." />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+  <script>
+const chatBox = document.getElementById("chatBox");
+
+function sendMessage() {
+  const input = document.getElementById("userInput");
+  const message = input.value.trim();
+  if (message === "") return;
+
+  appendMessage("You", message);
+  input.value = "";
+
+  setTimeout(() => {
+    const reply = getBotReply(message);
+    appendMessage("Alok", reply);
+  }, 500);
+}
+
+function appendMessage(sender, text) {
+  const messageElement = document.createElement("div");
+  messageElement.innerHTML = `<strong>${sender}:</strong> ${text}`;
+  chatBox.appendChild(messageElement);
+  chatBox.scrollTop = chatBox.scrollHeight;
+}
+
+function getBotReply(msg) {
+  msg = msg.toLowerCase();
+
+  if (msg.includes("best movie") || msg.includes("top movie")) {
+    return "According to IMDb, some top movies are The Shawshank Redemption, Inception, and Interstellar.";
+  } else if (msg.includes("shahrukh") || msg.includes("srk")) {
+    return "Shah Rukh Khan has starred in popular movies like Pathaan, Jawan, and Dilwale Dulhania Le Jayenge.";
+  } else if (msg.includes("marvel")) {
+    return "Marvel movies include Avengers, Iron Man, Thor, and Spider-Man.";
+  } else if (msg.includes("release")) {
+    return "Can you tell me which movie you're asking about? I'll try to find the release year.";
+  } else {
+    return "Sorry, I don't have info on that yet. Try asking about popular movies or actors.";
+  }
+}
+const movieData = {
+  "inception": "Inception is a 2010 sci-fi thriller directed by Christopher Nolan.",
+  "dangal": "Dangal is a 2016 Indian sports drama starring Aamir Khan.",
+  "3 idiots": "3 Idiots is a 2009 Indian comedy-drama directed by Rajkumar Hirani.",
+  "jawan": "Jawan is a 2023 Indian action thriller starring Shah Rukh Khan.",
+ "arfat":"arfat is the owner of this web site!",
+ "The dark knight":"The Dark Knight (2008),directed by Christopher Nolan, stars Christian Bale, Heath Ledger, Aaron Eckhart, and others.it was released on July 18, 2008, and grossed over $1.005 billion worldwide; Ledger won a posthumous Oscar for his role as the Joker."
+};
+function getBotReply(msg) {
+  msg = msg.toLowerCase();
+
+  const movieData = {
+    "inception": "Inception is a 2010 sci-fi thriller directed by Christopher Nolan.",
+    "dangal": "Dangal is a 2016 Indian sports drama starring Aamir Khan.",
+    "3 idiots": "3 Idiots is a 2009 Indian comedy-drama directed by Rajkumar Hirani.",
+    "jawan": "Jawan is a 2023 Indian action thriller starring Shah Rukh Khan.",
+   "arfat":"arfat is the owner of this web site!",
+   "what is your name":"my name is Alok",
+   "made you":"i am created by Mr.Arfat shaikh",
+   "dark knight":"directed by Christopher Nolan stars Christian Bale Heath Ledger Aaron Eckhart and others it was released on July 18 2008 and grossed over $1.005 billion worldwide Ledger won a posthumous Oscar for his role as the Joker",
+   "who are you":"I AM YOUR FEWTURE"
+  };
+
+  for (let movie in movieData) {
+    if (msg.includes(movie)) {
+      return movieData[movie];
+    }
+  }
+
+  // default reply
+  return "Sorry, I don't have info on that yet. Try another movie.";
+}
+  </script>
+</body>
+</html>
